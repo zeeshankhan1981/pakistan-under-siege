@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Khan Doctrine – Imran Khan's Legacy</title>
+  <meta property="og:title" content="The Khan Doctrine – Imran Khan's Legacy">
+  <meta property="og:description" content="Imran Khan's life, legacy, and vision for a sovereign Pakistan. Timeline, doctrine, quotes, and gallery.">
+  <meta property="og:type" content="website">
+  <!-- Replace the problematic Tailwind CDN with the official production CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#16a34a',
+            'primary-dark': '#15803d',
+            'primary-light': '#22c55e',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { 
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .monospace {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    code, pre, .code-text {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.95em;
+    }
+    .gradient-hero {
+      background: linear-gradient(120deg, #16a34a 0%, #0f5132 100%);
+    }
+    .hero-overlay {
+      background: rgba(0,0,0,0.5);
+    }
+    .shadow-xl-custom {
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    .hero-khan {
+      background-image: url('img/imrankhansk.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    
+    .hero-khan::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+    }
+    
+    .khan-photo {
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      border-radius: 0.5rem;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    
+    .khan-photo:hover {
+      transform: scale(1.03);
+    }
+    
+    .biography-entry {
+      position: relative;
+      padding-left: 30px;
+    }
+    
+    .biography-entry::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #16a34a;
+    }
+
+    .timeline-scroll {
+      scrollbar-width: thin;
+      scrollbar-color: #16a34a rgba(229, 231, 235, 0.5);
+    }
+
+    .timeline-scroll::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .timeline-scroll::-webkit-scrollbar-track {
+      background: rgba(229, 231, 235, 0.5);
+      border-radius: 10px;
+    }
+
+    .timeline-scroll::-webkit-scrollbar-thumb {
+      background-color: #16a34a;
+      border-radius: 10px;
+    }
+
+    .timeline-wrapper {
+      position: relative;
+    }
+
+    .timeline-nav-indicator {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      padding: 8px;
+      font-size: 0.75rem;
+      color: #4b5563;
+      background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.9) 20%);
+      pointer-events: none;
+    }
+
+    .timeline-container {
+      position: relative;
+      max-width: 100%;
+      overflow: hidden;
+    }
+    
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 25px 30px -12px rgba(0, 0, 0, 0.15);
+    }
+    
+    /* Scrollbar styling */
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #16a34a;
+      border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #15803d;
+    }
+    
+    .quote-animation {
+      transition: all 0.3s ease;
+    }
+    
+    .quote-animation:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <!-- Header & Navbar -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200 shadow-md">
+    <div class="max-w-6xl mx-auto flex items-center justify-between py-4 px-4">
+      <a class="text-3xl font-extrabold tracking-tight text-primary hover:text-primary-dark transition-colors duration-200" href="index.html">Pakistan Under Siege</a>
+      <div class="hidden md:flex space-x-8">
+        <a class="hover:text-primary font-semibold transition-colors duration-200" href="index.html">Home</a>
+        <a class="hover:text-primary font-semibold transition-colors duration-200 border-b-2 border-primary" href="khan.html">The Khan Doctrine</a>
+      </div>
+      <button class="md:hidden flex items-center px-3 py-2 border rounded text-primary border-primary bg-white/90 hover:bg-green-50 transition-all duration-200" id="menu-toggle">
+        <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+    </div>
+    <div class="md:hidden hidden" id="mobile-menu">
+      <a class="block px-4 py-3 hover:bg-green-50 font-semibold" href="index.html">Home</a>
+      <a class="block px-4 py-3 bg-green-50 font-semibold text-primary" href="khan.html">The Khan Doctrine</a>
+    </div>
+  </nav>
+  <script>
+    document.getElementById('menu-toggle').onclick = function() {
+      var menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    };
+  </script>
+
+  <!-- Hero Section -->
+  <section class="relative hero-khan min-h-[450px] md:min-h-[550px] flex items-center justify-center">
+    <div class="absolute inset-0 hero-overlay"></div>
+    <div class="relative z-10 max-w-2xl mx-auto text-center text-white px-6 py-12">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-6 drop-shadow-lg leading-tight">The Khan Doctrine</h1>
+      <p class="text-lg md:text-2xl font-medium mb-8 drop-shadow leading-relaxed">Imran Khan's vision for a sovereign Pakistan.</p>
+      <div class="flex flex-wrap justify-center gap-6 mt-6">
+        <a href="index.html" class="inline-flex items-center px-8 py-3 bg-white text-primary hover:text-primary-dark font-semibold rounded-full shadow-xl-custom transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Back to Homepage
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Biography Section -->
+  <section class="max-w-5xl mx-auto py-10 px-4">
+    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-8 text-center">Biography & Timeline</h2>
+    
+    <div class="mb-10">
+      <div class="bg-white rounded-2xl shadow-xl-custom p-8">
+        <h3 class="text-xl font-bold text-primary mb-6 text-center">Khan's Journey: Key Milestones</h3>
+        
+        <div class="timeline-container">
+          <div class="timeline-wrapper mb-1">
+            <div class="timeline-scroll flex overflow-x-auto py-4 gap-4 pb-6">
+              <div class="min-w-[220px] bg-white rounded-xl p-4 card-hover shadow-md text-center border border-gray-100">
+                <div class="bg-primary text-white text-lg font-bold inline-block px-5 py-2 rounded-full mb-3 -mt-8 shadow-lg">1952</div>
+                <h3 class="font-semibold mb-2">Born in Lahore</h3>
+                <p class="text-sm text-gray-600">Born on October 5, 1952. Educated at Aitchison College, Royal Grammar School Worcester, and Oxford University (PPE)</p>
+              </div>
+              <div class="min-w-[220px] bg-white rounded-xl p-4 card-hover shadow-md text-center border border-gray-100">
+                <div class="bg-primary text-white text-lg font-bold inline-block px-5 py-2 rounded-full mb-3 -mt-8 shadow-lg">1971–1992</div>
+                <h3 class="font-semibold mb-2">Cricket Career</h3>
+                <p class="text-sm text-gray-600">Test debut 1971, Captain 1982-1992. Led Pakistan to its first and only ODI World Cup victory in 1992, defeating England in Melbourne.</p>
+              </div>
+              <div class="min-w-[220px] bg-white rounded-xl p-4 card-hover shadow-md text-center border border-gray-100">
+                <div class="bg-primary text-white text-lg font-bold inline-block px-5 py-2 rounded-full mb-3 -mt-8 shadow-lg">1994</div>
+                <h3 class="font-semibold mb-2">Shaukat Khanum Hospital</h3>
+                <p class="text-sm text-gray-600">Founded Pakistan's first specialized cancer hospital in memory of his mother who died of cancer. Today treats over 75% of patients free of cost.</p>
+              </div>
+              <div class="min-w-[220px] bg-white rounded-xl p-4 card-hover shadow-md text-center border border-gray-100">
+                <div class="bg-primary text-white text-lg font-bold inline-block px-5 py-2 rounded-full mb-3 -mt-8 shadow-lg">1996</div>
+                <h3 class="font-semibold mb-2">PTI Foundation</h3>
+                <p class="text-sm text-gray-600">Founded Pakistan Tehreek-e-Insaf (Movement for Justice) on April 25, 1996, with a vision to create an Islamic welfare state.</p>
+              </div>
+              <div class="min-w-[220px] bg-white rounded-xl p-4 card-hover shadow-md text-center border border-gray-100">
+                <div class="bg-primary text-white text-lg font-bold inline-block px-5 py-2 rounded-full mb-3 -mt-8 shadow-lg">2002</div>
+                <h3 class="font-semibold mb-2">Political Entry</h3>
+                <p class="text-sm text-gray-600">Elected to National Assembly for the first time from Mianwali. Khan was the lone PTI member in parliament from 2002-2007.</p>
+              </div>
+              <div class="min-w-[220px] bg-white rounded-xl p-4 card-hover shadow-md text-center border border-gray-100">
+                <div class="bg-primary text-white text-lg font-bold inline-block px-5 py-2 rounded-full mb-3 -mt-8 shadow-lg">2005</div>
+                <h3 class="font-semibold mb-2">Namal University</h3>
+                <p class="text-sm text-gray-600">Founded Namal Knowledge City in Mianwali, his hometown. Partnered with University of Bradford to provide education to underprivileged areas.</p>
+              </div>
+              <div class="min-w-[220px] bg-white rounded-xl p-4 card-hover shadow-md text-center border border-gray-100">
+                <div class="bg-primary text-white text-lg font-bold inline-block px-5 py-2 rounded-full mb-3 -mt-8 shadow-lg">2011</div>
+                <h3 class="font-semibold mb-2">Political Breakthrough</h3>
+                <p class="text-sm text-gray-600">Historic Lahore rally on October 30 at Minar-e-Pakistan attracted over 100,000 people, establishing PTI as a major political force.</p>
+              </div>
+              <div class="min-w-[220px] bg-white rounded-xl p-4 card-hover shadow-md text-center border border-gray-100">
+                <div class="bg-primary text-white text-lg font-bold inline-block px-5 py-2 rounded-full mb-3 -mt-8 shadow-lg">2013</div>
+                <h3 class="font-semibold mb-2">KP Government</h3>
+                <p class="text-sm text-gray-600">PTI formed the provincial government in Khyber Pakhtunkhwa, implementing police reforms, healthcare for all, and environmental protection.</p>
+              </div>
+              <div class="min-w-[220px] bg-white rounded-xl p-4 card-hover shadow-md text-center border border-gray-100">
+                <div class="bg-primary text-white text-lg font-bold inline-block px-5 py-2 rounded-full mb-3 -mt-8 shadow-lg">2014</div>
+                <h3 class="font-semibold mb-2">Azadi March</h3>
+                <p class="text-sm text-gray-600">Led 126-day sit-in in Islamabad against electoral fraud in 2013 elections, attracting international attention to his anti-corruption stance.</p>
+              </div>
+              <div class="min-w-[220px] bg-white rounded-xl p-4 card-hover shadow-md text-center border border-gray-100">
+                <div class="bg-primary text-white text-lg font-bold inline-block px-5 py-2 rounded-full mb-3 -mt-8 shadow-lg">2016-17</div>
+                <h3 class="font-semibold mb-2">Panama Papers</h3>
+                <p class="text-sm text-gray-600">Led movement against PM Nawaz Sharif following Panama Papers revelations, resulting in Sharif's disqualification by Supreme Court.</p>
+              </div>
+              <div class="min-w-[220px] bg-white rounded-xl p-4 card-hover shadow-md text-center border border-gray-100">
+                <div class="bg-primary text-white text-lg font-bold inline-block px-5 py-2 rounded-full mb-3 -mt-8 shadow-lg">2018</div>
+                <h3 class="font-semibold mb-2">Prime Minister</h3>
+                <p class="text-sm text-gray-600">Won general elections on July 25, 2018, becoming Pakistan's 22nd Prime Minister on August 18, 2018, after a 22-year political struggle.</p>
+              </div>
+              <div class="min-w-[220px] bg-white rounded-xl p-4 card-hover shadow-md text-center border border-gray-100">
+                <div class="bg-primary text-white text-lg font-bold inline-block px-5 py-2 rounded-full mb-3 -mt-8 shadow-lg">2019</div>
+                <h3 class="font-semibold mb-2">UN Address</h3>
+                <p class="text-sm text-gray-600">Landmark speech at UN General Assembly highlighting Kashmir issue and Islamophobia, following India's revocation of Kashmir's special status.</p>
+              </div>
+              <div class="min-w-[220px] bg-white rounded-xl p-4 card-hover shadow-md text-center border border-gray-100">
+                <div class="bg-primary text-white text-lg font-bold inline-block px-5 py-2 rounded-full mb-3 -mt-8 shadow-lg">2020</div>
+                <h3 class="font-semibold mb-2">COVID-19 Response</h3>
+                <p class="text-sm text-gray-600">Implemented "smart lockdown" strategy and Ehsaas Emergency Cash Program, providing relief to 15 million families during pandemic.</p>
+              </div>
+              <div class="min-w-[220px] bg-white rounded-xl p-4 card-hover shadow-md text-center border border-gray-100">
+                <div class="bg-primary text-white text-lg font-bold inline-block px-5 py-2 rounded-full mb-3 -mt-8 shadow-lg">2021</div>
+                <h3 class="font-semibold mb-2">Climate Initiatives</h3>
+                <p class="text-sm text-gray-600">Expanded Ten Billion Tree Tsunami and Protected Areas Initiative, positioning Pakistan as a leader in climate action.</p>
+              </div>
+              <div class="min-w-[220px] bg-white rounded-xl p-4 card-hover shadow-md text-center border border-gray-100">
+                <div class="bg-primary text-white text-lg font-bold inline-block px-5 py-2 rounded-full mb-3 -mt-8 shadow-lg">April 2022</div>
+                <h3 class="font-semibold mb-2">Removal from Office</h3>
+                <p class="text-sm text-gray-600">Removed through no-confidence vote on April 10 after claiming U.S. interference. First PM in Pakistan's history to be removed this way.</p>
+              </div>
+              <div class="min-w-[220px] bg-white rounded-xl p-4 card-hover shadow-md text-center border border-gray-100">
+                <div class="bg-primary text-white text-lg font-bold inline-block px-5 py-2 rounded-full mb-3 -mt-8 shadow-lg">May 2023</div>
+                <h3 class="font-semibold mb-2">First Arrest</h3>
+                <p class="text-sm text-gray-600">Arrested on May 9, 2023, sparking nationwide protests. Supreme Court ordered his release three days later, calling the arrest illegal.</p>
+              </div>
+              <div class="min-w-[220px] bg-white rounded-xl p-4 card-hover shadow-md text-center border border-gray-100">
+                <div class="bg-primary text-white text-lg font-bold inline-block px-5 py-2 rounded-full mb-3 -mt-8 shadow-lg">2024</div>
+                <h3 class="font-semibold mb-2">Imprisonment</h3>
+                <p class="text-sm text-gray-600">Imprisoned on multiple charges. His party was denied its electoral symbol, but PTI-backed independents still won most seats in February elections.</p>
+              </div>
+              <div class="min-w-[220px] bg-white rounded-xl p-4 card-hover shadow-md text-center border border-gray-100">
+                <div class="bg-primary text-white text-lg font-bold inline-block px-5 py-2 rounded-full mb-3 -mt-8 shadow-lg">2025</div>
+                <h3 class="font-semibold mb-2">Ongoing Movement</h3>
+                <p class="text-sm text-gray-600">Despite ongoing legal challenges and detention, maintains widespread popular support with millions calling for his release and restoration of democracy.</p>
+              </div>
+            </div>
+            <div class="timeline-nav-indicator">
+              <span>Scroll horizontally to see more →</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- More Photos Section -->
+    <div class="mt-16 mb-10">
+      <h3 class="text-xl font-bold text-primary mb-6 text-center">Khan's Journey in Photos</h3>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="khan-photo">
+          <img 
+            src="img/imrankhan02.jpg" 
+            alt="Shaukat Khanum Memorial Hospital" 
+            class="w-full h-64 object-cover"
+          >
+          <div class="p-3 bg-white">
+            <h4 class="font-bold">Shaukat Khanum Hospital</h4>
+            <p class="text-sm text-gray-600">Khan's charitable cancer hospital, founded in 1994 in memory of his mother.</p>
+          </div>
+        </div>
+        
+        <div class="khan-photo">
+          <img 
+            src="img/imrankhan03.jpg" 
+            alt="Namal University Campus" 
+            class="w-full h-64 object-cover"
+          >
+          <div class="p-3 bg-white">
+            <h4 class="font-bold">Namal University</h4>
+            <p class="text-sm text-gray-600">Educational institution founded by Khan in Mianwali, his hometown.</p>
+          </div>
+        </div>
+        
+        <div class="khan-photo">
+          <img 
+            src="img/imrankhan04.jpg" 
+            alt="PTI Rally in Islamabad" 
+            class="w-full h-64 object-cover"
+          >
+          <div class="p-3 bg-white">
+            <h4 class="font-bold">PTI Azadi March</h4>
+            <p class="text-sm text-gray-600">Khan addressing supporters during a major political rally in Islamabad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: The 8-Point Khan Doctrine -->
+  <section id="doctrine" class="max-w-5xl mx-auto mb-16 px-4">
+    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-8 text-center">The 8-Point Khan Doctrine</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white rounded-xl shadow-xl-custom p-6 card-hover text-center border border-gray-100">
+        <div class="text-4xl mb-3">🛡️</div>
+        <h3 class="text-lg font-bold text-primary mb-2">Sovereign Foreign Policy</h3>
+        <p class="text-gray-600">"Absolutely Not" – Refused to compromise national sovereignty for foreign interests. Rejected US bases in Pakistan post-Afghanistan withdrawal. Advocated for friendly relations with all powers without subservience to any.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-xl-custom p-6 card-hover text-center border border-gray-100">
+        <div class="text-4xl mb-3">🤲</div>
+        <h3 class="text-lg font-bold text-primary mb-2">Islamic Welfare State</h3>
+        <p class="text-gray-600">Creating a state modeled on Riyasat-e-Madina (the Prophet's state in Medina), founded on justice, compassion, and meritocracy. Implemented through Ehsaas Program, Sehat Cards, affordable housing, and police reforms.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-xl-custom p-6 card-hover text-center border border-gray-100">
+        <div class="text-4xl mb-3">🕌</div>
+        <h3 class="text-lg font-bold text-primary mb-2">Global Anti-Islamophobia</h3>
+        <p class="text-gray-600">Led the UN to pass a resolution designating March 15 as International Day to Combat Islamophobia (sponsored by Pakistan under Khan's leadership). Sought global recognition of Islamophobia as a form of racism.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-xl-custom p-6 card-hover text-center border border-gray-100">
+        <div class="text-4xl mb-3">🕊️</div>
+        <h3 class="text-lg font-bold text-primary mb-2">Kashmir Self-Determination</h3>
+        <p class="text-gray-600">Staunch advocacy for Kashmiris' right to self-determination under UN resolutions. Internationalized the Kashmir issue, especially after India's 2019 revocation of Article 370. Seeks peaceful resolution.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-xl-custom p-6 card-hover text-center border border-gray-100">
+        <div class="text-4xl mb-3">🇵🇸</div>
+        <h3 class="text-lg font-bold text-primary mb-2">Palestine Rights</h3>
+        <p class="text-gray-600">Unequivocal support for Palestinian rights and statehood. Rejected normalization with Israel without Palestinian statehood. Advocates for two-state solution with East Jerusalem as capital of Palestinian state.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-xl-custom p-6 card-hover text-center border border-gray-100">
+        <div class="text-4xl mb-3">⚖️</div>
+        <h3 class="text-lg font-bold text-primary mb-2">Anti-Corruption & Rule of Law</h3>
+        <p class="text-gray-600">Principle that no society can progress without rule of law and accountability for the powerful. Implemented asset recovery unit, independent prosecutions, and judicial reforms to end "elite capture."</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-xl-custom p-6 card-hover text-center border border-gray-100">
+        <div class="text-4xl mb-3">🌳</div>
+        <h3 class="text-lg font-bold text-primary mb-2">Climate Leadership</h3>
+        <p class="text-gray-600">Launched Billion Tree Tsunami project in KP, expanded to Ten Billion Tree Tsunami nationally. Gained global recognition for Pakistan's reforestation and climate action, promoting a green economy.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-xl-custom p-6 card-hover text-center border border-gray-100">
+        <div class="text-4xl mb-3">💻</div>
+        <h3 class="text-lg font-bold text-primary mb-2">Digital Pakistan</h3>
+        <p class="text-gray-600">Digital Pakistan program to leverage technology for governance, transparency, and service delivery. Implemented digital payment systems, e-governance, and support for technology startups.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Quote Cards -->
+  <section class="max-w-3xl mx-auto mb-16 px-4">
+    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-8 text-center">Notable Quotes</h2>
+    <div class="bg-white/90 rounded-2xl shadow-xl-custom p-8">
+      <div class="bg-gray-50 border-l-4 border-primary p-5 rounded-lg mb-5 quote-animation">
+        <p class="text-lg italic mb-2">"Absolutely Not."</p>
+        <p class="text-primary font-medium">— Imran Khan, on allowing US bases in Pakistan (June 2021 interview with Axios)</p>
+      </div>
+      <div class="bg-gray-50 border-l-4 border-primary p-5 rounded-lg mb-5 quote-animation">
+        <p class="text-lg italic mb-2">"We will fight for Kashmir till the last drop of blood."</p>
+        <p class="text-primary font-medium">— UNGA Speech, September 2019</p>
+      </div>
+      <div class="bg-gray-50 border-l-4 border-primary p-5 rounded-lg mb-5 quote-animation">
+        <p class="text-lg italic mb-2">"A country is only as strong as its weakest citizen."</p>
+        <p class="text-primary font-medium">— Launch of Ehsaas Program, March 2019</p>
+      </div>
+      <div class="bg-gray-50 border-l-4 border-primary p-5 rounded-lg mb-5 quote-animation">
+        <p class="text-lg italic mb-2">"You win when you refuse to be defeated."</p>
+        <p class="text-primary font-medium">— Election Rally, Lahore, July 2018</p>
+      </div>
+      <div class="bg-gray-50 border-l-4 border-primary p-5 rounded-lg quote-animation">
+        <p class="text-lg italic mb-2">"Pakistan will lead the world in climate action."</p>
+        <p class="text-primary font-medium">— World Environment Day address, June 2021</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Image Gallery -->
+  <section class="max-w-5xl mx-auto mb-16 px-4">
+    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-8 text-center">Image Gallery</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <figure class="bg-white rounded-xl overflow-hidden shadow-xl-custom card-hover">
+        <img src="img/imrankhan05.jpg" alt="Imran Khan Cricket" class="w-full h-56 object-cover" loading="lazy">
+        <figcaption class="p-4 text-center">
+          <h3 class="font-bold text-gray-800">Cricket World Cup 1992</h3>
+          <p class="text-gray-600">Led Pakistan to its first Cricket World Cup victory as captain, taking 362 Test wickets and scoring 3807 runs in his career</p>
+        </figcaption>
+      </figure>
+      <figure class="bg-white rounded-xl overflow-hidden shadow-xl-custom card-hover">
+        <img src="img/imrankhan06.jpg" alt="Shaukat Khanum Hospital" class="w-full h-56 object-cover" loading="lazy">
+        <figcaption class="p-4 text-center">
+          <h3 class="font-bold text-gray-800">Shaukat Khanum Hospital</h3>
+          <p class="text-gray-600">Founded in 1994 in memory of his mother, treating over 75% of cancer patients free of cost</p>
+        </figcaption>
+      </figure>
+      <figure class="bg-white rounded-xl overflow-hidden shadow-xl-custom card-hover">
+        <img src="img/imrankhan07.jpg" alt="Namal University" class="w-full h-56 object-cover" loading="lazy">
+        <figcaption class="p-4 text-center">
+          <h3 class="font-bold text-gray-800">Namal University</h3>
+          <p class="text-gray-600">Established in 2008 in Mianwali, his ancestral district, bringing world-class education to rural areas</p>
+        </figcaption>
+      </figure>
+      <figure class="bg-white rounded-xl overflow-hidden shadow-xl-custom card-hover">
+        <img src="img/imrankhan08.jpg" alt="PTI Rally" class="w-full h-56 object-cover" loading="lazy">
+        <figcaption class="p-4 text-center">
+          <h3 class="font-bold text-gray-800">Political Movement</h3>
+          <p class="text-gray-600">Massive PTI rally, 2013</p>
+        </figcaption>
+      </figure>
+      <figure class="bg-white rounded-xl overflow-hidden shadow-xl-custom card-hover">
+        <img src="img/imrankhan.jpg" alt="Imran Khan PM Oath" class="w-full h-56 object-cover" loading="lazy">
+        <figcaption class="p-4 text-center">
+          <h3 class="font-bold text-gray-800">Prime Minister</h3>
+          <p class="text-gray-600">Taking oath as PM, 2018</p>
+        </figcaption>
+      </figure>
+      <figure class="bg-white rounded-xl overflow-hidden shadow-xl-custom card-hover">
+        <img src="img/imrankhansk.jpg" alt="Imran Khan Protest" class="w-full h-56 object-cover" loading="lazy">
+        <figcaption class="p-4 text-center">
+          <h3 class="font-bold text-gray-800">Resistance Movement</h3>
+          <p class="text-gray-600">Leading protests, 2022–2025</p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Video Gallery Section -->
+  <section class="max-w-4xl mx-auto mb-16 px-4">
+    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-8 text-center">Imran Khan: Video Archives</h2>
+    
+    <div class="bg-white rounded-xl shadow-xl-custom p-6">
+      <p class="mb-6 text-gray-700 text-center">Watch key speeches, interviews, and documentaries about Imran Khan's political journey and vision for Pakistan.</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Video 1: Cricket Victory -->
+        <div class="bg-gray-100 rounded-xl overflow-hidden shadow-md">
+          <div class="relative pb-[56.25%] h-0">
+            <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/Dbnxwqf6ZAQ" title="Imran Khan's 1992 World Cup Victory" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold text-gray-800">1992 World Cup Victory</h3>
+            <p class="text-sm text-gray-600">Historic footage of Imran Khan leading Pakistan to victory in the 1992 Cricket World Cup final against England, his crowning sporting achievement.</p>
+          </div>
+        </div>
+        
+        <!-- Video 2: Oxford Speech -->
+        <div class="bg-gray-100 rounded-xl overflow-hidden shadow-md">
+          <div class="relative pb-[56.25%] h-0">
+            <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/-UAqOQf8n6c" title="Imran Khan Oxford Union Speech" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold text-gray-800">Oxford Union Address</h3>
+            <p class="text-sm text-gray-600">Imran Khan's influential speech at the Oxford Union discussing his vision of Islamic welfare state and political philosophy.</p>
+          </div>
+        </div>
+        
+        <!-- Video 3: Prime Minister Oath -->
+        <div class="bg-gray-100 rounded-xl overflow-hidden shadow-md">
+          <div class="relative pb-[56.25%] h-0">
+            <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/c9Lmnwq4JMA" title="Imran Khan's Prime Minister Oath" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold text-gray-800">Prime Minister Oath Ceremony</h3>
+            <p class="text-sm text-gray-600">The historic moment when Imran Khan was sworn in as the 22nd Prime Minister of Pakistan in August 2018.</p>
+          </div>
+        </div>
+        
+        <!-- Video 4: UN Speech -->
+        <div class="bg-gray-100 rounded-xl overflow-hidden shadow-md">
+          <div class="relative pb-[56.25%] h-0">
+            <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/LGG_wecP3YQ" title="Imran Khan UN General Assembly Speech" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold text-gray-800">UN General Assembly Address</h3>
+            <p class="text-sm text-gray-600">Imran Khan's powerful speech at the 74th United Nations General Assembly highlighting issues of Islamophobia and Kashmir.</p>
+          </div>
+        </div>
+        
+        <!-- Video 5: PTI Movement -->
+        <div class="bg-gray-100 rounded-xl overflow-hidden shadow-md">
+          <div class="relative pb-[56.25%] h-0">
+            <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/VQt1iTEXfNU" title="Rise of PTI and Imran Khan" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold text-gray-800 monospace">The Rise of PTI Movement</h3>
+            <p class="text-sm text-gray-600 monospace">Documentary tracking the rise of Pakistan Tehreek-e-Insaf (PTI) from a small party to a major political force under Khan's leadership.</p>
+          </div>
+        </div>
+        
+        <!-- Video 6: Khan Doctrine -->
+        <div class="bg-gray-100 rounded-xl overflow-hidden shadow-md">
+          <div class="relative pb-[56.25%] h-0">
+            <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/MCys7M1Q5cQ" title="Khan's Vision for Pakistan" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold text-gray-800">Khan's Historic World Cup Speech</h3>
+            <p class="text-sm text-gray-600">Imran Khan's iconic 1992 World Cup victory speech, where he shared his vision for Pakistan and foreshadowed his future political career.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Recognition -->
+  <section class="max-w-3xl mx-auto mb-20 px-4">
+    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-8 text-center">Recognition & Awards</h2>
+    <div class="bg-white rounded-2xl shadow-xl-custom p-8 text-center">
+      <div class="flex flex-wrap justify-center gap-4">
+        <span class="inline-block bg-gray-100 px-4 py-2 rounded-full font-semibold text-gray-700">TIME 100 Most Influential People</span>
+        <span class="inline-block bg-gray-100 px-4 py-2 rounded-full font-semibold text-gray-700">UN Environment Champion</span>
+        <span class="inline-block bg-gray-100 px-4 py-2 rounded-full font-semibold text-gray-700">ICC Cricket Hall of Fame</span>
+        <span class="inline-block bg-gray-100 px-4 py-2 rounded-full font-semibold text-gray-700">Forbes Most Powerful Muslims</span>
+        <span class="inline-block bg-gray-100 px-4 py-2 rounded-full font-semibold text-gray-700">Hilal-e-Pakistan (Crescent of Pakistan)</span>
+        <span class="inline-block bg-gray-100 px-4 py-2 rounded-full font-semibold text-gray-700">Wisden Cricketer of the Year</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-100 py-12">
+    <div class="max-w-5xl mx-auto text-center px-4">
+      <div class="mb-6">
+        <a class="text-xl font-bold tracking-tight text-primary hover:text-primary-dark transition-colors duration-200" href="index.html">Pakistan Under Siege</a>
+      </div>
+      <div class="flex justify-center gap-8 mb-8">
+        <a href="index.html" class="text-gray-600 hover:text-primary transition-colors">Home</a>
+        <a href="khan.html" class="text-gray-600 hover:text-primary transition-colors">The Khan Doctrine</a>
+        <a href="index.html#reports" class="text-gray-600 hover:text-primary transition-colors">Reports</a>
+      </div>
+      <p class="text-gray-500 text-sm">&copy; 2025 Pakistan Under Siege. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

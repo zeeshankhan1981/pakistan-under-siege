@@ -1,0 +1,29 @@
+# Placeholder Image Descriptions for Pakistan Under Siege Website
+
+Since we cannot directly create or upload images here, below are detailed descriptions for the images needed:
+
+## For index.html
+1. **protest-scene.jpg** - A dramatic image of Pakistani protesters with banners/signs about human rights, showing a large crowd gathered in a major city like Karachi, Lahore or Islamabad. Ideally with some green flags or national symbols visible.
+
+## For khan.html
+1. **imran-khan-hero.jpg** - A heroic shot of Imran Khan speaking at a large rally, with microphone in hand, arms raised addressing a sea of supporters. Ideally with PTI (Pakistan Tehreek-e-Insaf) flags visible.
+
+2. **khan-cricket.jpg** - Imran Khan in cricket whites, holding the 1992 Cricket World Cup trophy aloft. The image should show him in his prime as Pakistan's captain celebrating their victory.
+
+3. **shaukat-khanum.jpg** - The exterior of Shaukat Khanum Memorial Cancer Hospital in Lahore, showing its modern architecture, or alternatively Imran Khan at the opening ceremony or visiting patients.
+
+4. **namal-university.jpg** - Aerial or frontal view of Namal University campus in Mianwali, showing its buildings surrounded by natural landscape, or Imran Khan at a graduation ceremony or campus event.
+
+5. **pti-rally.jpg** - A massive PTI political rally from around 2013-2018, showing the party's growing popularity with a sea of supporters waving flags and banners.
+
+6. **pm-oath.jpg** - Imran Khan taking oath as Prime Minister of Pakistan in 2018, in formal attire at an official ceremony with dignitaries present.
+
+7. **khan-protest.jpg** - Imran Khan leading protests after his 2022 removal from office, possibly with bandages or signs of persecution, addressing supporters during the resistance movement.
+
+## Logo Images (Small, simple logo files)
+1. **time-logo.png** - TIME Magazine logo
+2. **un-logo.png** - United Nations logo
+3. **icc-logo.png** - International Cricket Council logo
+4. **forbes-logo.png** - Forbes magazine logo
+
+These images should be properly licensed (royalty-free or with appropriate permissions) before being used on the live website.

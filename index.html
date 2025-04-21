@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pakistan Under Siege – The Struggle for Sovereignty and Justice</title>
+  <meta property="og:title" content="Pakistan Under Siege – The Struggle for Sovereignty and Justice">
+  <meta property="og:description" content="A decade of suppression, resistance, and a population betrayed. Human rights timeline, crisis analysis, and downloadable reports.">
+  <meta property="og:type" content="website">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#16a34a',
+            'primary-dark': '#15803d',
+            'primary-light': '#22c55e',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { 
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .gradient-hero {
+      background: linear-gradient(120deg, #16a34a 0%, #0f5132 100%);
+    }
+    .hero-overlay {
+      background: rgba(0,0,0,0.5);
+    }
+    .glass {
+      background: rgba(255,255,255,0.92); 
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .shadow-xl-custom {
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    
+    .hero-section {
+      background-image: url('img/protest-scene.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 10;
+    }
+    
+    .timeline-img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    
+    .monospace {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    
+    code, pre, .code-text {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.95em;
+    }
+    
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 25px 30px -12px rgba(0, 0, 0, 0.15);
+    }
+    
+    /* Scrollbar styling */
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #16a34a;
+      border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #15803d;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <!-- Header & Navbar -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200 shadow-md">
+    <div class="max-w-6xl mx-auto flex items-center justify-between py-4 px-4">
+      <a class="text-3xl font-extrabold tracking-tight text-primary hover:text-primary-dark transition-colors duration-200" href="#">Pakistan Under Siege</a>
+      <div class="hidden md:flex space-x-8">
+        <a class="hover:text-primary font-semibold transition-colors duration-200 border-b-2 border-primary" href="index.html">Home</a>
+        <a class="hover:text-primary font-semibold transition-colors duration-200" href="khan.html">The Khan Doctrine</a>
+      </div>
+      <button class="md:hidden flex items-center px-3 py-2 border rounded text-primary border-primary bg-white/90 hover:bg-green-50 transition-all duration-200" id="menu-toggle">
+        <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+    </div>
+    <div class="md:hidden hidden" id="mobile-menu">
+      <a class="block px-4 py-3 bg-green-50 font-semibold text-primary" href="index.html">Home</a>
+      <a class="block px-4 py-3 hover:bg-green-50 font-semibold" href="khan.html">The Khan Doctrine</a>
+    </div>
+  </nav>
+  <script>
+    document.getElementById('menu-toggle').onclick = function() {
+      var menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    };
+  </script>
+
+  <!-- Hero Section -->
+  <section class="relative hero-section min-h-[450px] md:min-h-[550px] flex items-center justify-center">
+    <div class="absolute inset-0 hero-overlay"></div>
+    <div class="relative z-10 max-w-2xl mx-auto text-center text-white px-6 py-12 hero-content">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-6 drop-shadow-lg leading-tight">Pakistan Under Siege</h1>
+      <p class="text-lg md:text-2xl font-medium mb-8 drop-shadow leading-relaxed">A decade of suppression, resistance, and a population betrayed.</p>
+      <div class="flex flex-wrap justify-center gap-6 mt-6">
+        <a href="#crisis" class="bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-8 rounded-full shadow-xl-custom transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">Explore Crisis</a>
+        <a href="#reports" class="bg-white/90 hover:bg-white text-primary hover:text-primary-dark font-semibold py-3 px-8 rounded-full shadow-xl-custom border-2 border-primary transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">Download Report</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Crisis Overview -->
+  <section id="crisis" class="max-w-4xl mx-auto mb-16 px-4 relative z-20 mt-[-60px]">
+    <div class="glass rounded-2xl shadow-xl-custom p-8 border border-gray-100">
+      <h2 class="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">Crisis Overview</h2>
+      <p class="mb-4 text-gray-700 leading-relaxed">This report provides a detailed analysis of the human rights situation across Pakistan's provinces, highlighting enforced disappearances, extrajudicial killings, religious persecution, suppression of free expression, and other systemic abuses.</p>
+      <div class="bg-gray-50 border-l-4 border-primary p-4 rounded-lg mb-4">
+        <h3 class="font-bold text-gray-800 mb-2">March 11, 2025: Jaffar Express Hijacking</h3>
+        <p class="text-gray-700">The Jaffar Express train, traveling from Quetta to Peshawar with over 400 passengers, was hijacked by the Balochistan Liberation Army (BLA) in the Bolan Pass region. The militants detonated explosives on the tracks, causing derailment, and opened fire, resulting in a hostage crisis. The BLA demanded the release of Baloch political prisoners, threatening to execute hostages. A military operation, "Operation Green Bolan," was launched, leading to the rescue of 354 hostages and the death of 33 militants. However, the attack resulted in at least 64 fatalities, including civilians and security personnel.</p>
+      </div>
+      <p class="mb-4 text-gray-700 leading-relaxed">Religious persecution, especially against the Ahmadi community, continues unabated, with recent mob violence in Karachi. In Khyber Pakhtunkhwa, militant bombings and civilian casualties from military operations have deepened the crisis. Punjab has seen a crackdown on free expression and passage of draconian censorship laws. In Gilgit-Baltistan and Kashmir, political repression and enforced disappearances persist.</p>
+      <div class="flex justify-center mt-6">
+        <a href="#hrv-table" class="inline-flex items-center text-primary hover:text-primary-dark font-semibold">
+          View Provincial Breakdown
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Human Rights Violations Table -->
+  <section id="hrv-table" class="max-w-5xl mx-auto mb-16 px-4 pt-10">
+    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">Human Rights Violations by Province</h2>
+    <div class="overflow-x-auto bg-white rounded-xl shadow-xl p-6 border border-gray-100">
+      <table class="min-w-full divide-y divide-gray-200 text-center text-base rounded-xl overflow-hidden">
+        <thead class="bg-green-50">
+          <tr>
+            <th class="py-4 px-4 font-semibold text-gray-700 border-b-2 border-primary">Province</th>
+            <th class="py-4 px-4 font-semibold text-gray-700 border-b-2 border-primary">Disappearances</th>
+            <th class="py-4 px-4 font-semibold text-gray-700 border-b-2 border-primary">Killings</th>
+            <th class="py-4 px-4 font-semibold text-gray-700 border-b-2 border-primary">Persecution</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white">
+          <tr class="hover:bg-gray-50 transition-colors duration-150">
+            <td class="py-4 px-4 font-semibold">Balochistan</td>
+            <td><span class="inline-block bg-gray-800 text-white rounded-full px-4 py-1.5 text-sm font-semibold">Thousands (2016–2025)</span></td>
+            <td><span class="inline-block bg-red-700 text-white rounded-full px-4 py-1.5 text-sm font-semibold">Hundreds</span></td>
+            <td><span class="inline-block bg-primary text-white rounded-full px-4 py-1.5 text-sm font-semibold">Activists, Hazaras</span></td>
+          </tr>
+          <tr class="hover:bg-gray-50 transition-colors duration-150">
+            <td class="py-4 px-4 font-semibold">Sindh</td>
+            <td><span class="inline-block bg-gray-800 text-white rounded-full px-4 py-1.5 text-sm font-semibold">Hundreds</span></td>
+            <td><span class="inline-block bg-red-700 text-white rounded-full px-4 py-1.5 text-sm font-semibold">Dozens</span></td>
+            <td><span class="inline-block bg-primary text-white rounded-full px-4 py-1.5 text-sm font-semibold">Hindus, Ahmadis, MQM</span></td>
+          </tr>
+          <tr class="hover:bg-gray-50 transition-colors duration-150">
+            <td class="py-4 px-4 font-semibold">Khyber Pakhtunkhwa</td>
+            <td><span class="inline-block bg-gray-800 text-white rounded-full px-4 py-1.5 text-sm font-semibold">~3,000 (2020)</span></td>
+            <td><span class="inline-block bg-red-700 text-white rounded-full px-4 py-1.5 text-sm font-semibold">Hundreds</span></td>
+            <td><span class="inline-block bg-primary text-white rounded-full px-4 py-1.5 text-sm font-semibold">Pashtuns, Minorities</span></td>
+          </tr>
+          <tr class="hover:bg-gray-50 transition-colors duration-150">
+            <td class="py-4 px-4 font-semibold">Punjab</td>
+            <td><span class="inline-block bg-gray-800 text-white rounded-full px-4 py-1.5 text-sm font-semibold">Dozens</span></td>
+            <td><span class="inline-block bg-red-700 text-white rounded-full px-4 py-1.5 text-sm font-semibold">Dozens</span></td>
+            <td><span class="inline-block bg-primary text-white rounded-full px-4 py-1.5 text-sm font-semibold">Christians, Ahmadis</span></td>
+          </tr>
+          <tr class="hover:bg-gray-50 transition-colors duration-150">
+            <td class="py-4 px-4 font-semibold">GB/Kashmir</td>
+            <td><span class="inline-block bg-gray-700 text-white rounded-full px-4 py-1.5 text-sm font-semibold">Unknown</span></td>
+            <td><span class="inline-block bg-red-700 text-white rounded-full px-4 py-1.5 text-sm font-semibold">Unknown</span></td>
+            <td><span class="inline-block bg-primary text-white rounded-full px-4 py-1.5 text-sm font-semibold">Political Activists</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Section 2.5: Provincial Human Rights Violations Details -->
+  <section class="max-w-5xl mx-auto mb-16 px-4 pt-4">
+    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-8 text-center">Provincial Human Rights Abuses (2016-2025)</h2>
+    
+    <!-- Balochistan Details -->
+    <div class="bg-white rounded-xl shadow-xl-custom mb-8 overflow-hidden border border-gray-100 card-hover">
+      <div class="bg-primary py-4 px-6">
+        <h3 class="text-xl font-bold text-white">Balochistan</h3>
+      </div>
+      <div class="p-6">
+        <p class="mb-4 text-gray-700 leading-relaxed">Balochistan saw pervasive enforced disappearances and extrajudicial killings throughout 2016–2025. Security agencies abducted Baloch students, activists, and suspected separatists, with hundreds of new disappearance cases reported nationwide in 2016 (728 officially recorded).</p>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-4">
+          <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 shadow-sm">
+            <h4 class="font-bold text-primary mb-3">Enforced Disappearances</h4>
+            <p class="text-gray-700">According to Pakistan's Commission of Inquiry on Enforced Disappearances (COIED), thousands of cases have been recorded from Balochistan. The International Commission of Jurists stated in 2021 that "not a single perpetrator of enforced disappearance has been held accountable" in Pakistan.</p>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 shadow-sm">
+            <h4 class="font-bold text-primary mb-3">Sectarian Violence</h4>
+            <p class="text-gray-700">On January 3, 2021, the Machh massacre took place when ISIS-linked gunmen executed 11 coal miners from the Hazara Shia minority after checking their IDs. The victims' families staged an 8-day protest, refusing to bury their dead until Prime Minister Khan visited.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Sindh Details -->
+    <div class="bg-white rounded-xl shadow-xl-custom mb-8 overflow-hidden border border-gray-100 card-hover">
+      <div class="bg-primary py-4 px-6">
+        <h3 class="text-xl font-bold text-white">Sindh</h3>
+      </div>
+      <div class="p-6">
+        <p class="mb-4 text-gray-700 leading-relaxed">Sindhi and Mohajir political activists also went missing. In 2016, several MQM party members in Karachi allegedly disappeared during the Rangers' crackdown. The Voice for Missing Persons of Sindh recorded about 30 disappearances in 2019, increasing to 99 in 2020.</p>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-4">
+          <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 shadow-sm">
+            <h4 class="font-bold text-primary mb-3">Extrajudicial Killings</h4>
+            <p class="text-gray-700">A turning point was the killing of Naqeebullah Mehsud in January 2018. The 27-year-old model was killed by Karachi police who falsely branded him a Taliban militant. His death sparked nationwide outrage and birthed the Pashtun Tahafuz Movement (PTM).</p>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 shadow-sm">
+            <h4 class="font-bold text-primary mb-3">Religious Minorities</h4>
+            <p class="text-gray-700">Sindh is home to Pakistan's largest Hindu minority and saw continued reports of forced conversions of Hindu girls to Islam. The U.S. Commission on International Religious Freedom flagged Sindh's forced conversions as a serious concern.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Khyber Pakhtunkhwa Details -->
+    <div class="bg-white rounded-xl shadow-xl-custom mb-8 overflow-hidden border border-gray-100 card-hover">
+      <div class="bg-primary py-4 px-6">
+        <h3 class="text-xl font-bold text-white">Khyber Pakhtunkhwa</h3>
+      </div>
+      <div class="p-6">
+        <p class="mb-4 text-gray-700 leading-relaxed">By end-2020, 2,942 missing persons cases were registered in Khyber Pakhtunkhwa – the highest of any province – reflecting how Pashtun activists suffered in the "war on dissent". The province faced severe militant violence, with the Pakistani Taliban (TTP) and ISIS both active.</p>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+          <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 shadow-sm">
+            <h4 class="font-bold text-primary mb-3">Violent Extremism</h4>
+            <p class="text-gray-700">A shocking blasphemy-related lynching occurred in April 2017 when university student Mashal Khan was brutally murdered by a mob over false blasphemy allegations at Bacha Khan University in Charsadda. The case reverberated nationwide, sparking rare debate about blasphemy misuse.</p>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 shadow-sm">
+            <h4 class="font-bold text-primary mb-3">Pashtun Tahafuz Movement (PTM)</h4>
+            <p class="text-gray-700">The extrajudicial killing of Naqeebullah Mehsud in Karachi in January 2018 catalyzed the formation of the Pashtun Tahafuz Movement. Led by Manzoor Pashteen, it began as a protest to demand justice for Naqeeb and removal of landmines in Waziristan, but grew into mass rallies across KP by March 2018, giving voice to "long-simmering anger at years of abuses" among Pashtuns.</p>
+          </div>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 shadow-sm">
+            <h4 class="font-bold text-primary mb-3">Resurgence of Terrorism</h4>
+            <p class="text-gray-700">On January 30, 2023, a suicide bomber attacked a mosque inside Peshawar's police headquarters, killing 101 people, mostly policemen. This was one of Pakistan's deadliest terror attacks in years. The Pakistani Taliban (TTP), emboldened by their ideological allies' victory in Afghanistan, escalated attacks throughout 2021-2023.</p>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 shadow-sm">
+            <h4 class="font-bold text-primary mb-3">Religious Minorities</h4>
+            <p class="text-gray-700">On December 30, 2020, a mob of hundreds, incited by a local cleric, burned down a historic Hindu shrine in Karak, KP. Authorities responded by arresting around 30 people, and the Supreme Court ordered reconstruction of the temple. In 2021, the rebuilt Karak Hindu temple was inaugurated.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Punjab & Kashmir Details -->
+    <div class="bg-white rounded-xl shadow-xl-custom overflow-hidden border border-gray-100 card-hover">
+      <div class="bg-primary py-4 px-6">
+        <h3 class="text-xl font-bold text-white">Punjab & Pakistan-Administered Kashmir</h3>
+      </div>
+      <div class="p-6">
+        <p class="mb-4 text-gray-700 leading-relaxed">In Punjab, religious minorities, particularly Christians and Ahmadis, faced persecution. In 2023, Pakistan witnessed one of its worst anti-Christian pogroms in recent history in Jaranwala, Punjab. Incited by blasphemy allegations, mobs armed with sticks attacked and burned at least 26 churches and dozens of Christian homes.</p>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-4">
+          <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 shadow-sm">
+            <h4 class="font-bold text-primary mb-3">Blasphemy Violence</h4>
+            <p class="text-gray-700">In January 2022, a crowd of over 200 people attacked and lynched a man accused of desecrating the Quran in Khanewal, Punjab. In July 2020, a U.S. citizen of Pakistani origin, Tahir Naseem, who was on trial for blasphemy, was shot dead in a courtroom in Peshawar by a teenager. The killer became a hero to some extremists.</p>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 shadow-sm">
+            <h4 class="font-bold text-primary mb-3">Media Suppression</h4>
+            <p class="text-gray-700">By 2020, media freedom had hit a nadir. The year saw multiple attacks on journalists. In July 2020, Matiullah Jan was abducted in Islamabad - a brazen action that sent a message to all journalists that powerful figures were willing to go to any extent. New social media rules enacted under PECA 2020 enabled censorship of online content under vague "national security" terms.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2.6: International Responses -->
+  <section class="max-w-5xl mx-auto mb-16 px-4 pt-4">
+    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-8 text-center">International Responses</h2>
+    
+    <div class="bg-white rounded-xl shadow-xl-custom p-8 border border-gray-100">
+      <p class="mb-6 text-gray-700 leading-relaxed text-center">The human rights situation in Pakistan has drawn significant international attention and responses from various organizations and nations:</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 shadow-sm card-hover">
+          <h3 class="text-xl font-bold text-primary mb-4 flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+            </svg>
+            United Nations
+          </h3>
+          <ul class="list-disc pl-5 space-y-3 text-gray-700">
+            <li>The UN Working Group on Enforced Disappearances has repeatedly cited cases in Pakistan in its communications, particularly from Balochistan and KP.</li>
+            <li>UN Secretary-General António Guterres "strongly condemned" the killing of 11 Hazara miners in the January 2021 Machh massacre.</li>
+            <li>Pakistan underwent its Universal Periodic Review at the UN Human Rights Council in early 2023, where numerous states raised concerns about enforced disappearances, extrajudicial killings, and misuse of blasphemy laws.</li>
+          </ul>
+        </div>
+        
+        <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 shadow-sm card-hover">
+          <h3 class="text-xl font-bold text-primary mb-4 flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+            Human Rights Organizations
+          </h3>
+          <ul class="list-disc pl-5 space-y-3 text-gray-700">
+            <li>Amnesty International demanded Pakistan end "decades of persecution" of Hazaras following the Machh massacre.</li>
+            <li>Human Rights Watch wrote that the Pashtun Tahafuz Movement gave voice to "long-simmering anger at years of abuses" among Pashtuns.</li>
+            <li>The International Commission of Jurists stated in late 2021 that "not a single perpetrator of enforced disappearance has been held accountable" in Pakistan.</li>
+            <li>The Committee to Protect Journalists and Reporters Without Borders highlighted Pakistan as one of the most dangerous places for journalists.</li>
+          </ul>
+        </div>
+        
+        <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 shadow-sm card-hover">
+          <h3 class="text-xl font-bold text-primary mb-4 flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
+            </svg>
+            Foreign Governments
+          </h3>
+          <ul class="list-disc pl-5 space-y-3 text-gray-700">
+            <li>In December 2019, the United States sanctioned former police officer Rao Anwar for "serious human rights abuses," noting he was "involved in over 190 fake police encounters that resulted in 400+ deaths, including Naqeebullah."</li>
+            <li>The U.S. State Department's 2023 Human Rights Report highlighted "credible reports of unlawful or arbitrary killings, including extrajudicial killings, and forced disappearances, especially in Balochistan."</li>
+            <li>The European Union linked Pakistan's trade benefits (GSP+ status) to progress on human rights, passing a resolution in 2021 calling for a review due to "alarming increase" in blasphemy abuses.</li>
+          </ul>
+        </div>
+        
+        <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 shadow-sm card-hover">
+          <h3 class="text-xl font-bold text-primary mb-4 flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            Pakistan's Responses
+          </h3>
+          <ul class="list-disc pl-5 space-y-3 text-gray-700">
+            <li>Pakistan passed the Journalists' Safety Law in November 2021, followed by the Sindh Journalists and Media Professionals Protection Act in August 2022.</li>
+            <li>The Supreme Court took notice of the Karak Hindu temple attack, ordering its reconstruction, which was completed in 2021.</li>
+            <li>Pakistan "noted" (did not fully accept) recommendations to repeal or reform blasphemy laws, but accepted recommendations to protect journalists and combat forced disappearances during its 2023 UN review.</li>
+            <li>Government responses to international criticism have often been defensive, with gradual policy shifts but limited change in fundamental practices.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Recent Events Timeline -->
+  <section class="max-w-4xl mx-auto mb-16 px-4">
+    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-8 text-center">Recent Events Timeline</h2>
+    <div class="bg-white rounded-xl shadow-xl-custom p-6 border border-gray-100">
+      <ol class="relative border-l-4 border-primary pl-8 py-6">
+        <li class="mb-10 ml-6">
+          <div class="absolute w-5 h-5 bg-primary rounded-full mt-1.5 -left-[11px] border-4 border-white shadow-md"></div>
+          <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 shadow-sm">
+            <div class="flex items-center mb-2">
+              <span class="font-semibold text-gray-500 mr-2">Mar 11, 2025:</span>
+              <span class="text-primary font-semibold text-lg">Jaffar Express Hijacking</span>
+            </div>
+            <p class="text-gray-700 mb-2">Balochistan Liberation Army (BLA) hijacked a train with 400+ passengers, detonating explosives on tracks. "Operation Green Bolan" rescued 354 hostages; 64 fatalities including civilians and security personnel.</p>
+            <a href="https://en.wikipedia.org/wiki/2025_Jaffar_Express_hijacking?utm_source=chatgpt.com" class="inline-flex items-center text-primary hover:text-primary-dark text-sm font-medium" target="_blank">
+              Learn more
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="mb-10 ml-6">
+          <div class="absolute w-5 h-5 bg-primary rounded-full mt-1.5 -left-[11px] border-4 border-white shadow-md"></div>
+          <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 shadow-sm">
+            <div class="flex items-center mb-2">
+              <span class="font-semibold text-gray-500 mr-2">Mar 21, 2025:</span>
+              <span class="text-primary font-semibold text-lg">Quetta Protest Crackdown</span>
+            </div>
+            <p class="text-gray-700">Police opened fire on demonstrators in Quetta protesting the handling of the Jaffar Express hijacking, killing three and injuring many. Human rights activist Mahrang Baloch was arrested and remains detained with concerns about her safety.</p>
+          </div>
+        </li>
+        <li class="mb-10 ml-6">
+          <div class="absolute w-5 h-5 bg-primary rounded-full mt-1.5 -left-[11px] border-4 border-white shadow-md"></div>
+          <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 shadow-sm">
+            <div class="flex items-center mb-2">
+              <span class="font-semibold text-gray-500 mr-2">Apr 18, 2025:</span>
+              <span class="text-primary font-semibold text-lg">Sectarian Violence in Karachi</span>
+            </div>
+            <p class="text-gray-700">In Karachi, Ahmadi community member Laeeq Cheema was beaten to death by a mob during a rally organized by radical Islamist group Tehreek-e-Labbaik Pakistan (TLP) near an Ahmadi place of worship.</p>
+          </div>
+        </li>
+        <li class="mb-10 ml-6">
+          <div class="absolute w-5 h-5 bg-primary rounded-full mt-1.5 -left-[11px] border-4 border-white shadow-md"></div>
+          <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 shadow-sm">
+            <div class="flex items-center mb-2">
+              <span class="font-semibold text-gray-500 mr-2">Mar 5, 2025:</span>
+              <span class="text-primary font-semibold text-lg">Bannu Terrorist Attack</span>
+            </div>
+            <p class="text-gray-700">Twin suicide bombings targeted a military compound in Bannu, Khyber Pakhtunkhwa, resulting in the deaths of five soldiers and 13 civilians.</p>
+          </div>
+        </li>
+        <li class="mb-10 ml-6">
+          <div class="absolute w-5 h-5 bg-primary rounded-full mt-1.5 -left-[11px] border-4 border-white shadow-md"></div>
+          <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 shadow-sm">
+            <div class="flex items-center mb-2">
+              <span class="font-semibold text-gray-500 mr-2">Mar 29, 2025:</span>
+              <span class="text-primary font-semibold text-lg">Mardan Civilian Casualties</span>
+            </div>
+            <p class="text-gray-700">Military operation targeting suspected TTP militants in Katlang, Mardan District (KP), led to the deaths of nine civilians, including two women and two children, sparking protests.</p>
+          </div>
+        </li>
+        <li class="ml-6">
+          <div class="absolute w-5 h-5 bg-primary rounded-full mt-1.5 -left-[11px] border-4 border-white shadow-md"></div>
+          <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 shadow-sm">
+            <div class="flex items-center mb-2">
+              <span class="font-semibold text-gray-500 mr-2">Feb 2025:</span>
+              <span class="text-primary font-semibold text-lg">Digital Content Regulation Act</span>
+            </div>
+            <p class="text-gray-700">Pakistan's parliament passed a controversial bill granting the government extensive control over social media, including imprisoning users for spreading "disinformation," raising free speech concerns.</p>
+          </div>
+        </li>
+      </ol>
+      <div class="bg-red-50 border-l-4 border-red-500 p-5 rounded-lg mt-6">
+        <div class="flex">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          </svg>
+          <div>
+            <h3 class="text-lg font-bold text-red-700 mb-1">Media Crackdown Alert</h3>
+            <p class="text-gray-700">In February 2025, Pakistan's parliament passed a law granting broad powers to censor media and imprison dissenters. Journalists and activists face increasing threats, with internet blackouts and site bans. Human Rights Watch has documented intensified restrictions on free expression, particularly in Punjab province. The law has been widely criticized for targeting dissenting voices.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Video Gallery -->
+  <section class="max-w-5xl mx-auto mb-16 px-4">
+    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-8 text-center">Video Documentation</h2>
+    
+    <div class="bg-white rounded-xl shadow-xl-custom p-8 border border-gray-100">
+      <p class="mb-8 text-gray-700 text-center text-lg">Watch video reports and documentaries about the human rights situation in Pakistan.</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Video 1 -->
+        <div class="bg-gray-100 rounded-xl overflow-hidden shadow-md border border-gray-200 card-hover">
+          <div class="relative pb-[56.25%] h-0">
+            <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/PyVuVA2fq_I" title="Human Rights Violations in Balochistan" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-gray-800 text-lg mb-2">Balochistan: The Untold Struggle</h3>
+            <p class="text-gray-700">Documentary exploring the ongoing human rights crisis in Balochistan, featuring testimonies from affected families and expert analysis.</p>
+          </div>
+        </div>
+        
+        <!-- Video 2 -->
+        <div class="bg-gray-100 rounded-xl overflow-hidden shadow-md border border-gray-200 card-hover">
+          <div class="relative pb-[56.25%] h-0">
+            <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/Z_ktYYhSsXY" title="Enforced Disappearances in Pakistan" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-gray-800 text-lg mb-2">Enforced Disappearances in Pakistan</h3>
+            <p class="text-gray-700">Al Jazeera report on Pakistan's enforced disappearances crisis, where thousands of political activists and human rights workers have been taken against their will.</p>
+          </div>
+        </div>
+        
+        <!-- Video 3 -->
+        <div class="bg-gray-100 rounded-xl overflow-hidden shadow-md border border-gray-200 card-hover">
+          <div class="relative pb-[56.25%] h-0">
+            <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/urk13mWOOsY" title="Pashtun Tahafuz Movement" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-gray-800 text-lg mb-2">Pashtun Tahafuz Movement</h3>
+            <p class="text-gray-700">Overview of the Pashtun Tahafuz Movement (PTM) and their struggle for justice and human rights in Pakistan's northwestern regions.</p>
+          </div>
+        </div>
+        
+        <!-- Video 4 -->
+        <div class="bg-gray-100 rounded-xl overflow-hidden shadow-md border border-gray-200 card-hover">
+          <div class="relative pb-[56.25%] h-0">
+            <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/ULEb25rxgdw" title="Religious Minorities in Pakistan" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-gray-800 text-lg mb-2">Religious Minorities Under Threat</h3>
+            <p class="text-gray-700">Documentary examining the persecution of religious minorities in Pakistan, including the challenges faced by Christians, Hindus, and Ahmadis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Downloadable Reports -->
+  <section id="reports" class="max-w-4xl mx-auto mb-20 px-4">
+    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-8 text-center">Download Full Reports</h2>
+    
+    <div class="bg-white rounded-xl shadow-xl-custom p-8 border border-gray-100">
+      <div class="flex flex-col items-center">
+        <p class="mb-8 text-gray-700 text-center max-w-2xl">Access our detailed reports on the human rights situation in Pakistan, with comprehensive analysis and documentation of violations across all provinces.</p>
+        
+        <div class="flex flex-col sm:flex-row justify-center gap-6 mb-8 w-full max-w-2xl">
+          <a href="docs/pakistan-hrv.md" class="flex-1 bg-primary hover:bg-primary-dark text-white font-semibold py-4 px-6 rounded-xl shadow-xl-custom text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2" download>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
+            </svg>
+            <span>Human Rights Violations (2016-2025)</span>
+          </a>
+          <a href="docs/pakistan-update-2025.md" class="flex-1 bg-primary hover:bg-primary-dark text-white font-semibold py-4 px-6 rounded-xl shadow-xl-custom text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2" download>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
+            </svg>
+            <span>2025 Situation Update</span>
+          </a>
+        </div>
+        
+        <div class="mt-4 pt-6 border-t border-gray-200 w-full max-w-2xl">
+          <h3 class="font-semibold text-center text-gray-700 mb-4">Additional Resources</h3>
+          <div class="flex flex-wrap justify-center gap-8">
+            <a href="https://www.ohchr.org/en/countries/pakistan" class="text-primary font-medium hover:text-primary-dark flex items-center gap-2 transition-colors" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              UN Human Rights
+            </a>
+            <a href="https://www.amnesty.org/en/location/asia-and-the-pacific/south-asia/pakistan/report-pakistan/" class="text-primary font-medium hover:text-primary-dark flex items-center gap-2 transition-colors" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              Amnesty International
+            </a>
+            <a href="https://www.hrw.org/asia/pakistan" class="text-primary font-medium hover:text-primary-dark flex items-center gap-2 transition-colors" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              Human Rights Watch
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-100 py-12">
+    <div class="max-w-5xl mx-auto text-center px-4">
+      <div class="mb-6">
+        <a class="text-xl font-bold tracking-tight text-primary hover:text-primary-dark transition-colors duration-200" href="#">Pakistan Under Siege</a>
+      </div>
+      <div class="flex justify-center gap-8 mb-8">
+        <a href="index.html" class="text-gray-600 hover:text-primary transition-colors">Home</a>
+        <a href="khan.html" class="text-gray-600 hover:text-primary transition-colors">The Khan Doctrine</a>
+        <a href="#reports" class="text-gray-600 hover:text-primary transition-colors">Reports</a>
+      </div>
+      <p class="text-gray-500 text-sm">&copy; 2025 Pakistan Under Siege. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
