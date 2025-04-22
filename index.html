@@ -123,6 +123,7 @@
       <div class="hidden md:flex space-x-8">
         <a class="hover:text-primary font-semibold transition-colors duration-200 border-b-2 border-primary" href="index.html">Home</a>
         <a class="hover:text-primary font-semibold transition-colors duration-200" href="khan.html">The Khan Doctrine</a>
+        <a class="hover:text-primary font-semibold transition-colors duration-200" href="docs.html">Documentation</a>
       </div>
       <button class="md:hidden flex items-center px-3 py-2 border rounded text-primary border-primary bg-white/90 hover:bg-green-50 transition-all duration-200" id="menu-toggle">
         <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
@@ -131,6 +132,7 @@
     <div class="md:hidden hidden" id="mobile-menu">
       <a class="block px-4 py-3 bg-green-50 font-semibold text-primary" href="index.html">Home</a>
       <a class="block px-4 py-3 hover:bg-green-50 font-semibold" href="khan.html">The Khan Doctrine</a>
+      <a class="block px-4 py-3 hover:bg-green-50 font-semibold" href="docs.html">Documentation</a>
     </div>
   </nav>
   <script>
@@ -152,6 +154,56 @@
       </div>
     </div>
   </section>
+
+  <!-- Interactive Visualizations Section -->
+  <section class="max-w-5xl mx-auto my-16 px-4">
+    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-8 text-center">Explore the Data: Interactive Visualizations</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-lg font-semibold mb-2">Enforced Disappearances (Balochistan, 2016–2025)</h3>
+        <canvas id="disappearancesChart" height="220"></canvas>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-2">Major Killings (Balochistan, 2016–2025)</h3>
+        <canvas id="killingsChart" height="220"></canvas>
+      </div>
+    </div>
+    <div class="mt-12 grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-lg font-semibold mb-2">Enforced Disappearances (Sindh, 2016–2025)</h3>
+        <canvas id="disappearancesChartSindh" height="220"></canvas>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-2">Major Killings (Sindh, 2016–2025)</h3>
+        <canvas id="killingsChartSindh" height="220"></canvas>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-2">Enforced Disappearances (KP, 2016–2025)</h3>
+        <canvas id="disappearancesChartKP" height="220"></canvas>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-2">Major Killings (KP, 2016–2025)</h3>
+        <canvas id="killingsChartKP" height="220"></canvas>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-2">Enforced Disappearances (Punjab, 2016–2025)</h3>
+        <canvas id="disappearancesChartPunjab" height="220"></canvas>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-2">Major Killings (Punjab, 2016–2025)</h3>
+        <canvas id="killingsChartPunjab" height="220"></canvas>
+      </div>
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/visualizations.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      renderDisappearanceChart();
+      renderKillingsChart();
+      renderAllProvinceCharts();
+    });
+  </script>
 
   <!-- Section 1: Crisis Overview -->
   <section id="crisis" class="max-w-4xl mx-auto mb-16 px-4 relative z-20 mt-[-60px]">
@@ -334,7 +386,7 @@
         <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 shadow-sm card-hover">
           <h3 class="text-xl font-bold text-primary mb-4 flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 019-9" />
             </svg>
             United Nations
           </h3>
@@ -408,7 +460,7 @@
             <a href="https://en.wikipedia.org/wiki/2025_Jaffar_Express_hijacking?utm_source=chatgpt.com" class="inline-flex items-center text-primary hover:text-primary-dark text-sm font-medium" target="_blank">
               Learn more
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                <path fill-rule="evenodd" d="M16.707 10.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
               </svg>
             </a>
           </div>
@@ -420,7 +472,7 @@
               <span class="font-semibold text-gray-500 mr-2">Mar 21, 2025:</span>
               <span class="text-primary font-semibold text-lg">Quetta Protest Crackdown</span>
             </div>
-            <p class="text-gray-700">Police opened fire on demonstrators in Quetta protesting the handling of the Jaffar Express hijacking, killing three and injuring many. Human rights activist Mahrang Baloch was arrested and remains detained with concerns about her safety.</p>
+            <p class="text-gray-700">Police opened fire on demonstrators in Quetta after the hijacking, killing three and injuring many. Human rights activist Mahrang Baloch was arrested and remains detained with concerns about her safety.</p>
           </div>
         </li>
         <li class="mb-10 ml-6">
@@ -453,7 +505,7 @@
             <p class="text-gray-700">Military operation targeting suspected TTP militants in Katlang, Mardan District (KP), led to the deaths of nine civilians, including two women and two children, sparking protests.</p>
           </div>
         </li>
-        <li class="ml-6">
+        <li class="mb-10 ml-6">
           <div class="absolute w-5 h-5 bg-primary rounded-full mt-1.5 -left-[11px] border-4 border-white shadow-md"></div>
           <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 shadow-sm">
             <div class="flex items-center mb-2">
@@ -463,16 +515,123 @@
             <p class="text-gray-700">Pakistan's parliament passed a controversial bill granting the government extensive control over social media, including imprisoning users for spreading "disinformation," raising free speech concerns.</p>
           </div>
         </li>
-      </ol>
-      <div class="bg-red-50 border-l-4 border-red-500 p-5 rounded-lg mt-6">
-        <div class="flex">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-          </svg>
-          <div>
-            <h3 class="text-lg font-bold text-red-700 mb-1">Media Crackdown Alert</h3>
-            <p class="text-gray-700">In February 2025, Pakistan's parliament passed a law granting broad powers to censor media and imprison dissenters. Journalists and activists face increasing threats, with internet blackouts and site bans. Human Rights Watch has documented intensified restrictions on free expression, particularly in Punjab province. The law has been widely criticized for targeting dissenting voices.</p>
+        <li class="ml-6">
+          <div class="absolute w-5 h-5 bg-primary rounded-full mt-1.5 -left-[11px] border-4 border-white shadow-md"></div>
+          <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 shadow-sm">
+            <div class="flex items-center mb-2">
+              <span class="font-semibold text-gray-500 mr-2">2025:</span>
+              <span class="text-primary font-semibold text-lg">Political Repression (Gilgit-Baltistan & Kashmir)</span>
+            </div>
+            <p class="text-gray-700">Arbitrary arrests, torture, and enforced disappearances of activists advocating autonomy.</p>
           </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Section: 2025 in Review - Visual Timeline -->
+  <section class="max-w-4xl mx-auto mb-16 px-4">
+    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-8 text-center">2025 in Review: Key Events</h2>
+    <div class="bg-white rounded-xl shadow-xl-custom p-6 border border-gray-100">
+      <ol class="relative border-l-4 border-primary pl-8 py-6">
+        <li class="mb-10 ml-6">
+          <div class="absolute w-5 h-5 bg-primary rounded-full mt-1.5 -left-[11px] border-4 border-white shadow-md"></div>
+          <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 shadow-sm">
+            <div class="flex items-center mb-2">
+              <span class="font-semibold text-gray-500 mr-2">Mar 11, 2025:</span>
+              <span class="font-bold">Jaffar Express Hijacking (Balochistan)</span>
+            </div>
+            <p class="text-gray-700 mb-1">Balochistan Liberation Army (BLA) hijacks a passenger train, leading to a deadly hostage crisis and military operation. 64 killed, 354 rescued.</p>
+          </div>
+        </li>
+        <li class="mb-10 ml-6">
+          <div class="absolute w-5 h-5 bg-primary rounded-full mt-1.5 -left-[11px] border-4 border-white shadow-md"></div>
+          <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 shadow-sm">
+            <div class="flex items-center mb-2">
+              <span class="font-semibold text-gray-500 mr-2">Mar 21, 2025:</span>
+              <span class="font-bold">Protest Crackdown (Balochistan)</span>
+            </div>
+            <p class="text-gray-700 mb-1">Police fire on demonstrators in Quetta after the hijacking, killing 3. Human rights activist Mahrang Baloch arrested.</p>
+          </div>
+        </li>
+        <li class="mb-10 ml-6">
+          <div class="absolute w-5 h-5 bg-primary rounded-full mt-1.5 -left-[11px] border-4 border-white shadow-md"></div>
+          <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 shadow-sm">
+            <div class="flex items-center mb-2">
+              <span class="font-semibold text-gray-500 mr-2">Apr 18, 2025:</span>
+              <span class="font-bold">Religious Persecution (Sindh)</span>
+            </div>
+            <p class="text-gray-700 mb-1">Ahmadi man Laeeq Cheema beaten to death by mob in Karachi during TLP rally.</p>
+          </div>
+        </li>
+        <li class="mb-10 ml-6">
+          <div class="absolute w-5 h-5 bg-primary rounded-full mt-1.5 -left-[11px] border-4 border-white shadow-md"></div>
+          <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 shadow-sm">
+            <div class="flex items-center mb-2">
+              <span class="font-semibold text-gray-500 mr-2">Mar 5, 2025:</span>
+              <span class="font-bold">Twin Suicide Bombings (KP)</span>
+            </div>
+            <p class="text-gray-700 mb-1">Attacks on military compound in Bannu, KP, kill 5 soldiers and 13 civilians.</p>
+          </div>
+        </li>
+        <li class="mb-10 ml-6">
+          <div class="absolute w-5 h-5 bg-primary rounded-full mt-1.5 -left-[11px] border-4 border-white shadow-md"></div>
+          <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 shadow-sm">
+            <div class="flex items-center mb-2">
+              <span class="font-semibold text-gray-500 mr-2">Mar 29, 2025:</span>
+              <span class="font-bold">Civilian Casualties in Military Ops (KP)</span>
+            </div>
+            <p class="text-gray-700 mb-1">Military operation in Mardan District kills 9 civilians, sparking protests.</p>
+          </div>
+        </li>
+        <li class="mb-10 ml-6">
+          <div class="absolute w-5 h-5 bg-primary rounded-full mt-1.5 -left-[11px] border-4 border-white shadow-md"></div>
+          <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 shadow-sm">
+            <div class="flex items-center mb-2">
+              <span class="font-semibold text-gray-500 mr-2">Jan-Feb 2025:</span>
+              <span class="font-bold">Suppression of Free Expression & Media (Punjab)</span>
+            </div>
+            <p class="text-gray-700 mb-1">New laws restrict speech, increase censorship, and target dissenting voices.</p>
+          </div>
+        </li>
+        <li class="ml-6">
+          <div class="absolute w-5 h-5 bg-primary rounded-full mt-1.5 -left-[11px] border-4 border-white shadow-md"></div>
+          <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 shadow-sm">
+            <div class="flex items-center mb-2">
+              <span class="font-semibold text-gray-500 mr-2">2025:</span>
+              <span class="font-bold">Political Repression (Gilgit-Baltistan & Kashmir)</span>
+            </div>
+            <p class="text-gray-700 mb-1">Arbitrary arrests, torture, and enforced disappearances of activists advocating autonomy.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Section: Human Rights Violations Visual Summary -->
+  <section class="max-w-4xl mx-auto mb-16 px-4">
+    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-8 text-center">Human Rights Violations: 2016–2025 Visual Summary</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-white rounded-xl shadow-xl-custom p-8 border border-gray-100 flex flex-col items-center">
+        <h3 class="text-lg font-semibold text-primary mb-4">Most Impacted Provinces</h3>
+        <ul class="list-disc ml-6 text-gray-700 text-base">
+          <li><span class="font-bold text-red-600">Balochistan:</span> Highest rates of enforced disappearances, extrajudicial killings, and militant violence.</li>
+          <li><span class="font-bold text-yellow-600">Sindh:</span> Political violence, religious persecution, and media suppression.</li>
+          <li><span class="font-bold text-green-600">Khyber Pakhtunkhwa:</span> Civilian casualties from conflict, militant attacks, and police abuses.</li>
+          <li><span class="font-bold text-blue-600">Punjab:</span> Crackdown on free expression and media, blasphemy-related violence.</li>
+        </ul>
+      </div>
+      <div class="bg-white rounded-xl shadow-xl-custom p-8 border border-gray-100 flex flex-col items-center">
+        <h3 class="text-lg font-semibold text-primary mb-4">Common Types of Violations</h3>
+        <ul class="list-disc ml-6 text-gray-700 text-base">
+          <li><span class="font-bold">Enforced Disappearances</span></li>
+          <li><span class="font-bold">Extrajudicial Killings</span></li>
+          <li><span class="font-bold">Religious Persecution</span></li>
+          <li><span class="font-bold">Media Suppression</span></li>
+          <li><span class="font-bold">Civilian Casualties in Conflict</span></li>
+        </ul>
+        <div class="mt-6">
+          <span class="inline-block bg-primary text-white px-4 py-2 rounded-full font-semibold">2016–2025: Over 5,000+ documented cases</span>
         </div>
       </div>
     </div>
@@ -554,6 +713,12 @@
             </svg>
             <span>2025 Situation Update</span>
           </a>
+          <a href="docs/khan-history-doctrine.md" class="flex-1 bg-primary hover:bg-primary-dark text-white font-semibold py-4 px-6 rounded-xl shadow-xl-custom text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2" download>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+            Download: The Khan Doctrine (Full Biography & Doctrine)
+          </a>
         </div>
         
         <div class="mt-4 pt-6 border-t border-gray-200 w-full max-w-2xl">
@@ -592,6 +757,7 @@
         <a href="index.html" class="text-gray-600 hover:text-primary transition-colors">Home</a>
         <a href="khan.html" class="text-gray-600 hover:text-primary transition-colors">The Khan Doctrine</a>
         <a href="#reports" class="text-gray-600 hover:text-primary transition-colors">Reports</a>
+        <a href="docs.html" class="text-gray-600 hover:text-primary transition-colors">Documentation</a>
       </div>
       <p class="text-gray-500 text-sm">&copy; 2025 Pakistan Under Siege. All rights reserved.</p>
     </div>
