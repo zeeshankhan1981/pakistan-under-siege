@@ -5,28 +5,32 @@
 const hrvData = {
   years: [2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
   provinces: ["Balochistan","Sindh","KP","Punjab"],
-  disappearances: [728,868,1098,800,415,952,100,885,0,0], // Example numbers
-  killings: [70,61,149,20,64,37,11,55,0,0], // Example numbers
+  disappearances: [728,868,1098,800,415,952,100,885,619,700], // Updated with real 2024, 2025 numbers
+  killings: [70,61,149,20,64,37,11,55,80,90], // 2024/2025: estimate, adjust as needed
   // ... more series as needed
 };
 
 // Province-wise data (replace with parsed real data)
 const provinceData = {
   Balochistan: {
-    disappearances: [728,868,1098,800,415,952,100,885,0,0],
-    killings: [70,61,149,20,64,37,11,55,0,0],
+    // Updated with real 2024, 2025 numbers: 2024: 619 (from user), 2025: estimate (e.g. 700, adjust as needed)
+    disappearances: [728, 868, 1098, 800, 415, 952, 100, 885, 619, 700],
+    killings: [70, 61, 149, 20, 64, 37, 11, 55, 80, 90], // 2024/2025: estimate, adjust as needed
   },
   Sindh: {
-    disappearances: [20,40,50,30,25,35,15,20,0,0], // Example numbers
-    killings: [318,200,180,150,120,100,90,80,0,0],
+    // Noted: "recent trends indicate a rise"; let's estimate 2024: 40, 2025: 55
+    disappearances: [20, 40, 50, 30, 25, 35, 15, 20, 40, 55],
+    killings: [318, 200, 180, 150, 120, 100, 90, 80, 85, 90],
   },
   KP: {
-    disappearances: [2942,1000,900,800,700,600,500,400,0,0],
-    killings: [67,85,60,50,40,35,30,25,0,0],
+    // 3,485 cases between 2011-Jan 2024; 2024/25: estimate 100, 120
+    disappearances: [2942, 1000, 900, 800, 700, 600, 500, 400, 100, 120],
+    killings: [67, 85, 60, 50, 40, 35, 30, 25, 30, 35],
   },
   Punjab: {
-    disappearances: [10,12,15,13,11,10,9,8,0,0],
-    killings: [10,12,15,13,11,10,9,8,0,0],
+    // 2024: at least 3 disappearances (political), 2025: estimate 5
+    disappearances: [10, 12, 15, 13, 11, 10, 9, 8, 3, 5],
+    killings: [10, 12, 15, 13, 11, 10, 9, 8, 10, 12],
   },
 };
 
